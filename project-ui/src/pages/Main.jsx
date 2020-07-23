@@ -3,7 +3,7 @@ import PROJECT_LIST from '../assets/data/projectList';
 import TASK_LIST from '../assets/data/taskList';
 import { AddReleaseContainer, TableContainer } from '../containers';
 import { useState } from 'react';
-const meta = [{ label: 'Version Name' }];
+
 const Main = () => {
   const [masterList, setMasterList] = useState([]);
   const [taskList, setTaskList] = useState({});
@@ -15,7 +15,7 @@ const Main = () => {
   return (
     <React.Fragment>
       <section>
-        <TableContainer />
+        <TableContainer tableData={masterList} taskList={taskList} />
       </section>
       <AddReleaseContainer />
     </React.Fragment>

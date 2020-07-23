@@ -1,14 +1,15 @@
 import React from 'react';
 import DynamicCell from './DynamicCell';
 
-const DynamicRow = ({ data }) => (
-  <tr>
-    {data.map(({ item }) => (
-      <td>
-        <DynamicCell item={item} />
-      </td>
-    ))}
-  </tr>
-);
+const DynamicRow = ({ data, metaData }) =>
+  metaData ? (
+    <tr>
+      {metaData.map((item) => (
+        <td key={`cell_${Math.random()}`}>
+          <DynamicCell {...item} data={data} />
+        </td>
+      ))}
+    </tr>
+  ) : null;
 
 export default DynamicRow;

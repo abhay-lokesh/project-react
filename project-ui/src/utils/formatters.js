@@ -1,3 +1,3 @@
-export default formatDate = (date, format) => {
+export const formatDate = (date, format) => {
   return date;
 };
