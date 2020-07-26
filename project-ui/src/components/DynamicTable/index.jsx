@@ -1,13 +1,15 @@
 import React from 'react';
 import DynamicRow from './DynamicRow';
-
+import './DynamicTable.scss';
 const DynamicTable = ({ tableData, metaData }) => (
   <table>
     <thead>
       <tr>
         {metaData
           ? metaData.map(({ label, width }) => (
-              <th key={`table_head_${Math.random()}`}>{label}</th>
+              <th className='cell--header' key={`table_head_${Math.random()}`}>
+                {label}
+              </th>
             ))
           : null}
       </tr>

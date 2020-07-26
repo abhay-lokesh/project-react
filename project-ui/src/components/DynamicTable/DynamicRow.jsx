@@ -5,9 +5,7 @@ const DynamicRow = ({ data, metaData }) =>
   metaData ? (
     <tr>
       {metaData.map((item) => (
-        <td key={`cell_${Math.random()}`}>
-          <DynamicCell {...item} data={data} />
-        </td>
+        <DynamicCell key={`cell_${Math.random()}`} {...item} data={data} />
       ))}
     </tr>
   ) : null;

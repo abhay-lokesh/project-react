@@ -3,9 +3,10 @@ import Graph from './Graph';
 import CompDate from './CompDate';
 import Dropdown from '../../Dropdown';
 import CompText from './CompText';
+import '../DynamicTable.scss';
 const typeCompMap = ({ data, type }) => {
   const newmap = {
-    date: <CompDate data={data} />,
+    date: <CompDate date={data} />,
     graph: <Graph data={data} />,
     text: <CompText data={data} />,
     dropdown: <Dropdown data={data} />,
@@ -14,7 +15,7 @@ const typeCompMap = ({ data, type }) => {
 };
 const DynamicCell = ({ data, identifier, type }) => {
   const newData = data[identifier];
-  return typeCompMap({ data: newData, type });
+  return <td className='cell--body'>{typeCompMap({ data: newData, type })}</td>;
 };
 
 export default DynamicCell;
