@@ -7,7 +7,7 @@ const App = () => (
     <header className='header'>
       <p className='container'>Project UI</p>
     </header>
-    <main className='container'>
+    <main className='container flex-1'>
       <Main />
     </main>
   </React.Fragment>

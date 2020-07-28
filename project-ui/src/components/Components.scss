@@ -1,0 +1,40 @@
+.btn {
+  background: #ddd;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  &.primary {
+    background: #033ce4;
+    border: 1px solid #033ce4;
+    color: #fff;
+    &:hover {
+      background: darken($color: #033ce4, $amount: 5);
+      border-color: darken($color: #033ce4, $amount: 5);
+    }
+  }
+  &--secondary {
+    color: rgb(17, 17, 204);
+    border-color: #ddd;
+  }
+  &.rt-margin {
+    margin-right: 8px;
+  }
+}
+
+.input-group {
+  padding: 4px 0 4px 0;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+.input {
+  padding: 8px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #eaeced;
+  border: none;
+}

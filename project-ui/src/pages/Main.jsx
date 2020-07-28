@@ -14,10 +14,10 @@ const Main = () => {
   }, []);
   return (
     <React.Fragment>
-      <section>
+      <section className='flex flex-column h-100p justify-between'>
         <TableContainer tableData={masterList} taskList={taskList} />
+        <AddReleaseContainer />
       </section>
-      <AddReleaseContainer />
     </React.Fragment>
   );
 };

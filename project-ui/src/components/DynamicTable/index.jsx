@@ -7,7 +7,10 @@ const DynamicTable = ({ tableData, metaData }) => (
       <tr>
         {metaData
           ? metaData.map(({ label, width }) => (
-              <th className='cell--header' key={`table_head_${Math.random()}`}>
+              <th
+                className='cell--header'
+                style={{ width: `${width}%` }}
+                key={`table_head_${Math.random()}`}>
                 {label}
               </th>
             ))

@@ -3,3 +3,30 @@
   padding: 0 30px;
   margin: 0 auto;
 }
+
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.h-100p {
+  height: 100%;
+}
+.w-100p {
+  width: 100%;
+}
+.align-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}

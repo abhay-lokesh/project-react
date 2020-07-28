@@ -1,8 +1,9 @@
 import React from 'react';
 
-const TableContainer = ({ type, placeholder, value, onChange }) => (
+const TableContainer = ({ type = 'text', placeholder, value, onChange }) => (
   <input
-    type='text'
+    type={type}
+    className='input'
     placeholder={placeholder}
     value={value}
     onChange={onChange}
